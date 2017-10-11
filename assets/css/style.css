@@ -1,3 +1,11 @@
-.text-center:{
+.text-center{
+	font-size: 45px;
+}
+
+.col-sm-6-text-center{
 	font-size: 35px;
+}
+
+.container{ 
+	 
 }
