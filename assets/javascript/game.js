@@ -3,12 +3,24 @@
 // 4 crystals, each have a random value between 1 and 12
 // wins and loses
 
-$(document).ready(function(){
+$(document).ready(function(){  //JavaScript function that wraps everything
+
+	$("#redNum");
+	$("#greenNum")
+	$("#blueNum")
+	$("#yellowNum")
+
+	$("#sumCrystals")
+	$("#clickColor")
+	$("#wins")
+	$("#losses")
+
+	$("#targetNum")
 
 	var redNum = 0;
 	var greenNum = 0;
 	var blueNum = 0;
-	var yellowNUm = 0;
+	var yellowNum = 0;
 
 	var sumCrystals = 0;
 	var clickColor = "";
@@ -16,6 +28,8 @@ $(document).ready(function(){
 	var losses = 0;
 
 	var targetNum = 0;
+
+	$('id') //jquery equivalent of get element by id
 
 	redNum = Math.floor(Math.random() * 12) + 1;
 	greenNum = Math.floor(Math.random() * 12) + 1;
@@ -26,7 +40,8 @@ $(document).ready(function(){
 	$(".crystal").on("click"), function(){
 		console.log('I am within the crystal on click function');
 
-		}); //not sure why lighting up
+	}); //not sure why lighting up
+
+
 	
-	});
-}
+});
