@@ -35,11 +35,20 @@ $(document).ready(function(){  //JavaScript function that wraps everything
 	yellowNUm = Math.floor(Math.random() * 12) + 1;
 		//generating the random number for each of the crystals
 
+	$("#number-to-guess").text(targetNumber);
+
+	var counter = 0;
+
+	var numberOptions = [10, 5, 3, 7]; //expanding our array to include four options
+
+	for (var i = 0; i < numberOptions.length; i++) {
+
+
 
 	$(".crystal").on("click", function(){
 		console.log('I am within the crystal on click function');
 
-	var crystalValue = ($(this).attr("data-crystalvalue")); //using .attr("data0crystalvalue") allows us to grab the value out of the d"data-crystalvalue attribute
+	var crystalValue = ($(this).attr("data-crystalvalue")); //using .attr("datacrystalvalue") allows us to grab the value out of the d"data-crystalvalue attribute
     crystalValue = parseInt(crystalValue);	
 
     counter += crystalValue;
