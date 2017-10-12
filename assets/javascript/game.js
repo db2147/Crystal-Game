@@ -29,18 +29,33 @@ $(document).ready(function(){  //JavaScript function that wraps everything
 
 	var targetNum = 0;
 
-	$('id') //jquery equivalent of get element by id
-
 	redNum = Math.floor(Math.random() * 12) + 1;
 	greenNum = Math.floor(Math.random() * 12) + 1;
 	blueNum = Math.floor(Math.random() * 12) + 1;
 	yellowNUm = Math.floor(Math.random() * 12) + 1;
 		//generating the random number for each of the crystals
 
-	$(".crystal").on("click"), function(){
+
+	$(".crystal").on("click", function(){
 		console.log('I am within the crystal on click function');
 
-	}); //not sure why lighting up
+	var crystalValue = ($(this).attr("data-crystalvalue")); //using .attr("data0crystalvalue") allows us to grab the value out of the d"data-crystalvalue attribute
+    crystalValue = parseInt(crystalValue);	
+
+    counter += crystalValue;
+
+    alert("New score: " + counter);
+
+    if (counter === targetNumber) {
+    	alert("You win!");
+    }
+
+    else if (counter >= targetNumber) {
+    	alert("You lose!!");
+    }
+
+
+	});  
 
 
 	
