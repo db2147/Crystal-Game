@@ -5,18 +5,6 @@
 
 $(document).ready(function(){  //JavaScript function that wraps everything
 
-	$("#redNum");
-	$("#greenNum")
-	$("#blueNum")
-	$("#yellowNum")
-
-	$("#sumCrystals")
-	$("#clickColor")
-	$("#wins")
-	$("#losses")
-
-	$("#targetNum")
-
 	var redNum = 0;
 	var greenNum = 0;
 	var blueNum = 0;
@@ -41,10 +29,19 @@ $(document).ready(function(){  //JavaScript function that wraps everything
 
 	var numberOptions = [10, 5, 3, 7]; //expanding our array to include four options
 
-	for (var i = 0; i < numberOptions.length; i++) {
 
+	var imageCrystal = $("<img>"); //for each iteration we will create an imageCrystal
 
+	imageCrystal.addClass("crystal-image");
 
+	//each image will be given an src link to the crystal image
+
+	imageCrystal.attr("data-crystalvalue", numberOptions[i]);
+
+	$("#crystals").append(imageCrystal);
+
+	$(".crystal-image").on("click", function(){	
+     	
 	$(".crystal").on("click", function(){
 		console.log('I am within the crystal on click function');
 
@@ -61,11 +58,11 @@ $(document).ready(function(){  //JavaScript function that wraps everything
 
     else if (counter >= targetNumber) {
     	alert("You lose!!");
-    }
-
-
+    	}
 	});  
 
+	gameReset();
 
+});   
 	
-});
+ 
