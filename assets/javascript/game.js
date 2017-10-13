@@ -17,30 +17,30 @@ $(document).ready(function(){  //JavaScript function that wraps everything
 
 	var targetNum = 0;
 
-	redNum = Math.floor(Math.random() * 12) + 1;
-	greenNum = Math.floor(Math.random() * 12) + 1;
-	blueNum = Math.floor(Math.random() * 12) + 1;
-	yellowNUm = Math.floor(Math.random() * 12) + 1;
-		//generating the random number for each of the crystals
-
-	$("#number-to-guess").text(targetNumber);
-
 	var counter = 0;
 
-	var numberOptions = [10, 5, 3, 7]; //expanding our array to include four options
 
+	function gameReset () {
+		redNum = Math.floor(Math.random() * 12) + 1;
+		greenNum = Math.floor(Math.random() * 12) + 1;
+		blueNum = Math.floor(Math.random() * 12) + 1;
+		yellowNUm = Math.floor(Math.random() * 12) + 1;
+		//generating the random number for each of the crystals
 
-	var imageCrystal = $("<img>"); //for each iteration we will create an imageCrystal
+		targetNum = Math.floor(Math.random() * 102 + 19;  //generates the target number
 
-	imageCrystal.addClass("crystal-image");
+		$("#targetNumber").text("Target Number: " +targetNum);
+		$("#totalNumber").html("Total: "+ 0);
 
-	//each image will be given an src link to the crystal image
+	 	$("#blueCrystal").attr("data-crystalvalue", blueNum);   //.attr retrieves the number from crystal
+		$("#redCrystal").attr("data-crystalvalue", redNum);
+		$("#greenCrystal").attr("data-crystalvalue", greenNum);
+		$("#yellowCrystal").attr("data-crystalvalue", yellowNum);
 
-	imageCrystal.attr("data-crystalvalue", numberOptions[i]);
+	  
+	  counter = 0;
+	}
 
-	$("#crystals").append(imageCrystal);
-
-	$(".crystal-image").on("click", function(){	
      	
 	$(".crystal").on("click", function(){
 		console.log('I am within the crystal on click function');
@@ -50,14 +50,17 @@ $(document).ready(function(){  //JavaScript function that wraps everything
 
     counter += crystalValue;
 
-    alert("New score: " + counter);
 
-    if (counter === targetNumber) {
+    if (counter === targetNum) {
     	alert("You win!");
+    	wins++;
+    	$("#sWins").html("Wins: "+ wins);
+    	gameReset();
     }
-
     else if (counter >= targetNumber) {
     	alert("You lose!!");
+    	losses++;
+    	$("#sLoses").html("Loses: "+ losses);
     	}
 	});  
 
