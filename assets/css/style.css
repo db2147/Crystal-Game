@@ -1,13 +1,19 @@
 .text-center{
 	font-size: 45px;
+	padding: 45px;
 
 }
 
 .col-sm-6-text-center{
 	font-size: 35px;
+
 }
 
 .container{ 
-	
+	 background-color: beige;
 
+}
+
+.break{
+	background-color: orange;
 }
