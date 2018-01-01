@@ -1,7 +1,7 @@
 .text-center{
 	font-size: 45px;
 	padding: 45px;
-
+	font-family: Quesha;
 }
 
 .col-sm-6-text-center{
@@ -16,4 +16,9 @@
 
 .break{
 	background-color: orange;
+	font-size: 65px;
+}
+
+.title{
+	font-size: 105px;
 }
