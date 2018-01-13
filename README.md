@@ -26,9 +26,9 @@ Option 1 Game design notes
 The random number shown at the start of the game should be between 19 - 120.
 
 Each crystal should have a random hidden value between 1 - 12.
-<img src="assets/images\crystal.png" alt="Drawing" style="width: 450px;" />
+<img src="assets/images\crystal.PNG" alt="Drawing" style="width: 450px;" />
 
 <br>
 <br>
 This is an example of how I use the jquery library with javascript:
-<img src="assets/images\jquery.png" alt="Drawing" style="width: 450px;" />
+<img src="assets/images\jquery.PNG" alt="Drawing" style="width: 450px;" />
