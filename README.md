@@ -1,6 +1,5 @@
-# week-5-game
+# Crystal-Game
 <img src="assets/images\jquery-javascript.png" alt="Drawing" style="width: 250px;  float: right" />
-Crystal game using the jquery library
 
 Here's how the app works:
 
